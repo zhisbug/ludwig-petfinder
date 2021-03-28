@@ -7,13 +7,13 @@ from ludwig.utils.data_utils import replace_file_extension
 
 csv_path = "./data/train_combined.csv"
 
-dataset_to_use = replace_file_extension(csv_path, 'parquet')
-pd.read_csv(csv_path).to_parquet(
-    dataset_to_use,
-    index=False
-)
+# dataset_to_use = replace_file_extension(csv_path, 'parquet')
+# pd.read_csv(csv_path).to_parquet(
+#     dataset_to_use,
+#     index=False
+# )
 
-# dataset_to_use = dd.read_csv(csv_path)
+dataset_to_use = dd.read_csv(csv_path)
 
 
 model = LudwigModel(
